@@ -83,6 +83,13 @@ public:
 	virtual bool RayCast(b2RayCastOutput* output, const b2RayCastInput& input,
 						const b2Transform& transform, int32 childIndex) const = 0;
 
+	/// Compute the distance from the current shape to the specified point. This only works for convex shapes.
+	/// @param xf the shape world transform.
+	/// @param p a point in world coordinates.
+	/// @param distance returns the distance from the current shape.
+	/// @param normal returns the direction in which the distance increases.
+	virtual void ComputeDistance(const b2Transform& xf, const b2Vec2& p, float32* distance, b2Vec2* normal, int32 childIndex) const = 0;
+
 	/// Given a transform, compute the associated axis aligned bounding box for a child shape.
 	/// @param aabb returns the axis aligned box.
 	/// @param xf the world transform of the shape.

@@ -159,6 +159,10 @@ public:
 	b2FixtureUserData& GetUserData();
 	const b2FixtureUserData& GetUserData() const;
 
+	/// Compute the distance from this fixture.
+	/// @param p a point in world coordinates.
+	void ComputeDistance(const b2Vec2& p, float32* distance, b2Vec2* normal, int32 childIndex) const;
+
 	/// Test a point for containment in this fixture.
 	/// @param p a point in world coordinates.
 	bool TestPoint(const b2Vec2& p) const;
@@ -310,6 +314,11 @@ inline void b2Fixture::SetDensity(float density)
 {
 	b2Assert(b2IsValid(density) && density >= 0.0f);
 	m_density = density;
+}
+
+inline void b2Fixture::ComputeDistance(const b2Vec2& p, float32* d, b2Vec2* n, int32 childIndex) const
+{
+	m_shape->ComputeDistance(m_body->GetTransform(), p, d, n, childIndex);
 }
 
 inline float b2Fixture::GetDensity() const

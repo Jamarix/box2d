@@ -45,6 +45,9 @@ bool b2CircleShape::TestPoint(const b2Transform& transform, const b2Vec2& p) con
 	return b2Dot(d, d) <= m_radius * m_radius;
 }
 
+// Empty
+void b2CircleShape::ComputeDistance(const b2Transform& xf, const b2Vec2& p, float32* distance, b2Vec2* normal, int32 childIndex) const {};
+
 // Collision Detection in Interactive 3D Environments by Gino van den Bergen
 // From Section 3.1.2
 // x = s + a * r

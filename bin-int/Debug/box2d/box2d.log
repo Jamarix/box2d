@@ -1,0 +1,607 @@
+﻿  b2_broad_phase.cpp
+  b2_chain_shape.cpp
+  b2_circle_shape.cpp
+  b2_collide_circle.cpp
+  b2_collide_edge.cpp
+  b2_collide_polygon.cpp
+  b2_collision.cpp
+  b2_distance.cpp
+  b2_dynamic_tree.cpp
+  b2_edge_shape.cpp
+  b2_polygon_shape.cpp
+  b2_time_of_impact.cpp
+C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_common.h(37,1): warning C4005: 'b2Assert': macro redefinition
+  (compiling source file 'src/collision/b2_broad_phase.cpp')
+  C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_settings.h(38,1):
+  see previous definition of 'b2Assert'
+  
+C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_common.h(116,1): warning C4005: 'b2_linearSleepTolerance': macro redefinition
+  (compiling source file 'src/collision/b2_broad_phase.cpp')
+  C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_settings.h(201,1):
+  see previous definition of 'b2_linearSleepTolerance'
+  
+C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_common.h(37,1): warning C4005: 'b2Assert': macro redefinition
+  (compiling source file 'src/collision/b2_chain_shape.cpp')
+  C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_settings.h(38,1):
+  see previous definition of 'b2Assert'
+  
+C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_common.h(116,1): warning C4005: 'b2_linearSleepTolerance': macro redefinition
+  (compiling source file 'src/collision/b2_chain_shape.cpp')
+  C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_settings.h(201,1):
+  see previous definition of 'b2_linearSleepTolerance'
+  
+C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_common.h(37,1): warning C4005: 'b2Assert': macro redefinition
+  (compiling source file 'src/collision/b2_distance.cpp')
+  C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_settings.h(38,1):
+  see previous definition of 'b2Assert'
+  
+C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_common.h(116,1): warning C4005: 'b2_linearSleepTolerance': macro redefinition
+  (compiling source file 'src/collision/b2_distance.cpp')
+  C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_settings.h(201,1):
+  see previous definition of 'b2_linearSleepTolerance'
+  
+C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_common.h(37,1): warning C4005: 'b2Assert': macro redefinition
+  (compiling source file 'src/collision/b2_collide_polygon.cpp')
+  C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_settings.h(38,1):
+  see previous definition of 'b2Assert'
+  
+C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_common.h(37,1): warning C4005: 'b2Assert': macro redefinition
+  (compiling source file 'src/collision/b2_collide_edge.cpp')
+  C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_settings.h(38,1):
+  see previous definition of 'b2Assert'
+  
+C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_common.h(37,1): warning C4005: 'b2Assert': macro redefinition
+  (compiling source file 'src/collision/b2_collision.cpp')
+  C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_settings.h(38,1):
+  see previous definition of 'b2Assert'
+  
+C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_common.h(37,1): warning C4005: 'b2Assert': macro redefinition
+  (compiling source file 'src/collision/b2_collide_circle.cpp')
+  C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_settings.h(38,1):
+  see previous definition of 'b2Assert'
+  
+C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_common.h(116,1): warning C4005: 'b2_linearSleepTolerance': macro redefinition
+  (compiling source file 'src/collision/b2_collide_polygon.cpp')
+  C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_settings.h(201,1):
+  see previous definition of 'b2_linearSleepTolerance'
+  
+C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_common.h(116,1): warning C4005: 'b2_linearSleepTolerance': macro redefinition
+  (compiling source file 'src/collision/b2_collide_edge.cpp')
+  C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_settings.h(201,1):
+  see previous definition of 'b2_linearSleepTolerance'
+  
+C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_common.h(116,1): warning C4005: 'b2_linearSleepTolerance': macro redefinition
+  (compiling source file 'src/collision/b2_collide_circle.cpp')
+  C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_settings.h(201,1):
+  see previous definition of 'b2_linearSleepTolerance'
+  
+C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_common.h(116,1): warning C4005: 'b2_linearSleepTolerance': macro redefinition
+  (compiling source file 'src/collision/b2_collision.cpp')
+  C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_settings.h(201,1):
+  see previous definition of 'b2_linearSleepTolerance'
+  
+C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_common.h(37,1): warning C4005: 'b2Assert': macro redefinition
+  (compiling source file 'src/collision/b2_polygon_shape.cpp')
+  C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_settings.h(38,1):
+  see previous definition of 'b2Assert'
+  
+C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_common.h(116,1): warning C4005: 'b2_linearSleepTolerance': macro redefinition
+  (compiling source file 'src/collision/b2_polygon_shape.cpp')
+  C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_settings.h(201,1):
+  see previous definition of 'b2_linearSleepTolerance'
+  
+C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_common.h(37,1): warning C4005: 'b2Assert': macro redefinition
+  (compiling source file 'src/collision/b2_circle_shape.cpp')
+  C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_settings.h(38,1):
+  see previous definition of 'b2Assert'
+  
+C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_common.h(116,1): warning C4005: 'b2_linearSleepTolerance': macro redefinition
+  (compiling source file 'src/collision/b2_circle_shape.cpp')
+  C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_settings.h(201,1):
+  see previous definition of 'b2_linearSleepTolerance'
+  
+C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_common.h(37,1): warning C4005: 'b2Assert': macro redefinition
+  (compiling source file 'src/collision/b2_time_of_impact.cpp')
+  C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_settings.h(38,1):
+  see previous definition of 'b2Assert'
+  
+C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_common.h(116,1): warning C4005: 'b2_linearSleepTolerance': macro redefinition
+  (compiling source file 'src/collision/b2_time_of_impact.cpp')
+  C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_settings.h(201,1):
+  see previous definition of 'b2_linearSleepTolerance'
+  
+C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_common.h(37,1): warning C4005: 'b2Assert': macro redefinition
+  (compiling source file 'src/collision/b2_edge_shape.cpp')
+  C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_settings.h(38,1):
+  see previous definition of 'b2Assert'
+  
+C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_common.h(116,1): warning C4005: 'b2_linearSleepTolerance': macro redefinition
+  (compiling source file 'src/collision/b2_edge_shape.cpp')
+  C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_settings.h(201,1):
+  see previous definition of 'b2_linearSleepTolerance'
+  
+C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_common.h(37,1): warning C4005: 'b2Assert': macro redefinition
+  (compiling source file 'src/collision/b2_dynamic_tree.cpp')
+  C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_settings.h(38,1):
+  see previous definition of 'b2Assert'
+  
+C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_common.h(116,1): warning C4005: 'b2_linearSleepTolerance': macro redefinition
+  (compiling source file 'src/collision/b2_dynamic_tree.cpp')
+  C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_settings.h(201,1):
+  see previous definition of 'b2_linearSleepTolerance'
+  
+  b2_block_allocator.cpp
+  b2_draw.cpp
+  b2_math.cpp
+  b2_settings.cpp
+  b2_stack_allocator.cpp
+  b2_timer.cpp
+C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_common.h(37,1): warning C4005: 'b2Assert': macro redefinition
+  (compiling source file 'src/common/b2_block_allocator.cpp')
+  C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_settings.h(38,1):
+  see previous definition of 'b2Assert'
+  
+C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_common.h(116,1): warning C4005: 'b2_linearSleepTolerance': macro redefinition
+  (compiling source file 'src/common/b2_block_allocator.cpp')
+  C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_settings.h(201,1):
+  see previous definition of 'b2_linearSleepTolerance'
+  
+C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_common.h(37,1): warning C4005: 'b2Assert': macro redefinition
+  (compiling source file 'src/common/b2_draw.cpp')
+  C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_settings.h(38,1):
+  see previous definition of 'b2Assert'
+  
+C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_common.h(116,1): warning C4005: 'b2_linearSleepTolerance': macro redefinition
+  (compiling source file 'src/common/b2_draw.cpp')
+  C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_settings.h(201,1):
+  see previous definition of 'b2_linearSleepTolerance'
+  
+  b2_body.cpp
+C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_common.h(37,1): warning C4005: 'b2Assert': macro redefinition
+  (compiling source file 'src/common/b2_settings.cpp')
+  C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_settings.h(38,1):
+  see previous definition of 'b2Assert'
+  
+C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_common.h(116,1): warning C4005: 'b2_linearSleepTolerance': macro redefinition
+  (compiling source file 'src/common/b2_settings.cpp')
+  C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_settings.h(201,1):
+  see previous definition of 'b2_linearSleepTolerance'
+  
+C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_common.h(37,1): warning C4005: 'b2Assert': macro redefinition
+  (compiling source file 'src/common/b2_math.cpp')
+  C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_settings.h(38,1):
+  see previous definition of 'b2Assert'
+  
+C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_common.h(116,1): warning C4005: 'b2_linearSleepTolerance': macro redefinition
+  (compiling source file 'src/common/b2_math.cpp')
+  C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_settings.h(201,1):
+  see previous definition of 'b2_linearSleepTolerance'
+  
+C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_common.h(37,1): warning C4005: 'b2Assert': macro redefinition
+  (compiling source file 'src/common/b2_timer.cpp')
+  C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_settings.h(38,1):
+  see previous definition of 'b2Assert'
+  
+C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_common.h(37,1): warning C4005: 'b2Assert': macro redefinition
+  (compiling source file 'src/common/b2_stack_allocator.cpp')
+  C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_settings.h(38,1):
+  see previous definition of 'b2Assert'
+  
+C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_common.h(116,1): warning C4005: 'b2_linearSleepTolerance': macro redefinition
+  (compiling source file 'src/common/b2_timer.cpp')
+  C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_settings.h(201,1):
+  see previous definition of 'b2_linearSleepTolerance'
+  
+C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_common.h(116,1): warning C4005: 'b2_linearSleepTolerance': macro redefinition
+  (compiling source file 'src/common/b2_stack_allocator.cpp')
+  C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_settings.h(201,1):
+  see previous definition of 'b2_linearSleepTolerance'
+  
+  b2_chain_circle_contact.cpp
+  b2_chain_polygon_contact.cpp
+  b2_circle_contact.cpp
+  b2_contact.cpp
+C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_common.h(37,1): warning C4005: 'b2Assert': macro redefinition
+  (compiling source file 'src/dynamics/b2_body.cpp')
+  C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_settings.h(38,1):
+  see previous definition of 'b2Assert'
+  
+C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_common.h(116,1): warning C4005: 'b2_linearSleepTolerance': macro redefinition
+  (compiling source file 'src/dynamics/b2_body.cpp')
+  C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_settings.h(201,1):
+  see previous definition of 'b2_linearSleepTolerance'
+  
+C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_common.h(37,1): warning C4005: 'b2Assert': macro redefinition
+  (compiling source file 'src/dynamics/b2_chain_circle_contact.cpp')
+  C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_settings.h(38,1):
+  see previous definition of 'b2Assert'
+  
+C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_common.h(116,1): warning C4005: 'b2_linearSleepTolerance': macro redefinition
+  (compiling source file 'src/dynamics/b2_chain_circle_contact.cpp')
+  C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_settings.h(201,1):
+  see previous definition of 'b2_linearSleepTolerance'
+  
+C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_common.h(37,1): warning C4005: 'b2Assert': macro redefinition
+  (compiling source file 'src/dynamics/b2_circle_contact.cpp')
+  C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_settings.h(38,1):
+  see previous definition of 'b2Assert'
+  
+C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_common.h(116,1): warning C4005: 'b2_linearSleepTolerance': macro redefinition
+  (compiling source file 'src/dynamics/b2_circle_contact.cpp')
+  C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_settings.h(201,1):
+  see previous definition of 'b2_linearSleepTolerance'
+  
+C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_common.h(37,1): warning C4005: 'b2Assert': macro redefinition
+  (compiling source file 'src/dynamics/b2_chain_polygon_contact.cpp')
+  C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_settings.h(38,1):
+  see previous definition of 'b2Assert'
+  
+C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_common.h(116,1): warning C4005: 'b2_linearSleepTolerance': macro redefinition
+  (compiling source file 'src/dynamics/b2_chain_polygon_contact.cpp')
+  C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_settings.h(201,1):
+  see previous definition of 'b2_linearSleepTolerance'
+  
+  b2_contact_manager.cpp
+C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_common.h(37,1): warning C4005: 'b2Assert': macro redefinition
+  (compiling source file 'src/dynamics/b2_contact.cpp')
+  C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_settings.h(38,1):
+  see previous definition of 'b2Assert'
+  
+C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_common.h(116,1): warning C4005: 'b2_linearSleepTolerance': macro redefinition
+  (compiling source file 'src/dynamics/b2_contact.cpp')
+  C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_settings.h(201,1):
+  see previous definition of 'b2_linearSleepTolerance'
+  
+  b2_contact_solver.cpp
+  b2_distance_joint.cpp
+  b2_edge_circle_contact.cpp
+  b2_edge_polygon_contact.cpp
+  b2_fixture.cpp
+C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_common.h(37,1): warning C4005: 'b2Assert': macro redefinition
+  (compiling source file 'src/dynamics/b2_contact_manager.cpp')
+  C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_settings.h(38,1):
+  see previous definition of 'b2Assert'
+  
+C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_common.h(116,1): warning C4005: 'b2_linearSleepTolerance': macro redefinition
+  (compiling source file 'src/dynamics/b2_contact_manager.cpp')
+  C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_settings.h(201,1):
+  see previous definition of 'b2_linearSleepTolerance'
+  
+C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_common.h(37,1): warning C4005: 'b2Assert': macro redefinition
+  (compiling source file 'src/dynamics/b2_contact_solver.cpp')
+  C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_settings.h(38,1):
+  see previous definition of 'b2Assert'
+  
+C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_common.h(116,1): warning C4005: 'b2_linearSleepTolerance': macro redefinition
+  (compiling source file 'src/dynamics/b2_contact_solver.cpp')
+  C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_settings.h(201,1):
+  see previous definition of 'b2_linearSleepTolerance'
+  
+C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_common.h(37,1): warning C4005: 'b2Assert': macro redefinition
+  (compiling source file 'src/dynamics/b2_distance_joint.cpp')
+  C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_settings.h(38,1):
+  see previous definition of 'b2Assert'
+  
+C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_common.h(116,1): warning C4005: 'b2_linearSleepTolerance': macro redefinition
+  (compiling source file 'src/dynamics/b2_distance_joint.cpp')
+  C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_settings.h(201,1):
+  see previous definition of 'b2_linearSleepTolerance'
+  
+C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_common.h(37,1): warning C4005: 'b2Assert': macro redefinition
+  (compiling source file 'src/dynamics/b2_edge_circle_contact.cpp')
+  C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_settings.h(38,1):
+  see previous definition of 'b2Assert'
+  
+C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_common.h(116,1): warning C4005: 'b2_linearSleepTolerance': macro redefinition
+  (compiling source file 'src/dynamics/b2_edge_circle_contact.cpp')
+  C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_settings.h(201,1):
+  see previous definition of 'b2_linearSleepTolerance'
+  
+C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_common.h(37,1): warning C4005: 'b2Assert': macro redefinition
+  (compiling source file 'src/dynamics/b2_fixture.cpp')
+  C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_settings.h(38,1):
+  see previous definition of 'b2Assert'
+  
+C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_common.h(116,1): warning C4005: 'b2_linearSleepTolerance': macro redefinition
+  (compiling source file 'src/dynamics/b2_fixture.cpp')
+  C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_settings.h(201,1):
+  see previous definition of 'b2_linearSleepTolerance'
+  
+C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_common.h(37,1): warning C4005: 'b2Assert': macro redefinition
+  (compiling source file 'src/dynamics/b2_edge_polygon_contact.cpp')
+  C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_settings.h(38,1):
+  see previous definition of 'b2Assert'
+  
+C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_common.h(116,1): warning C4005: 'b2_linearSleepTolerance': macro redefinition
+  (compiling source file 'src/dynamics/b2_edge_polygon_contact.cpp')
+  C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_settings.h(201,1):
+  see previous definition of 'b2_linearSleepTolerance'
+  
+  b2_friction_joint.cpp
+  b2_gear_joint.cpp
+  b2_island.cpp
+C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_common.h(37,1): warning C4005: 'b2Assert': macro redefinition
+  (compiling source file 'src/dynamics/b2_friction_joint.cpp')
+  C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_settings.h(38,1):
+  see previous definition of 'b2Assert'
+  
+C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_common.h(116,1): warning C4005: 'b2_linearSleepTolerance': macro redefinition
+  (compiling source file 'src/dynamics/b2_friction_joint.cpp')
+  C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_settings.h(201,1):
+  see previous definition of 'b2_linearSleepTolerance'
+  
+C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_common.h(37,1): warning C4005: 'b2Assert': macro redefinition
+  (compiling source file 'src/dynamics/b2_gear_joint.cpp')
+  C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_settings.h(38,1):
+  see previous definition of 'b2Assert'
+  
+  b2_joint.cpp
+C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_common.h(116,1): warning C4005: 'b2_linearSleepTolerance': macro redefinition
+  (compiling source file 'src/dynamics/b2_gear_joint.cpp')
+  C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_settings.h(201,1):
+  see previous definition of 'b2_linearSleepTolerance'
+  
+C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_common.h(37,1): warning C4005: 'b2Assert': macro redefinition
+  (compiling source file 'src/dynamics/b2_island.cpp')
+  C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_settings.h(38,1):
+  see previous definition of 'b2Assert'
+  
+C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_common.h(116,1): warning C4005: 'b2_linearSleepTolerance': macro redefinition
+  (compiling source file 'src/dynamics/b2_island.cpp')
+  C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_settings.h(201,1):
+  see previous definition of 'b2_linearSleepTolerance'
+  
+  b2_motor_joint.cpp
+  b2_mouse_joint.cpp
+  b2_polygon_circle_contact.cpp
+C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_common.h(37,1): warning C4005: 'b2Assert': macro redefinition
+  (compiling source file 'src/dynamics/b2_joint.cpp')
+  C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_settings.h(38,1):
+  see previous definition of 'b2Assert'
+  
+C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_common.h(116,1): warning C4005: 'b2_linearSleepTolerance': macro redefinition
+  (compiling source file 'src/dynamics/b2_joint.cpp')
+  C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_settings.h(201,1):
+  see previous definition of 'b2_linearSleepTolerance'
+  
+  b2_polygon_contact.cpp
+  b2_prismatic_joint.cpp
+  b2_pulley_joint.cpp
+C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_common.h(37,1): warning C4005: 'b2Assert': macro redefinition
+  (compiling source file 'src/dynamics/b2_motor_joint.cpp')
+  C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_settings.h(38,1):
+  see previous definition of 'b2Assert'
+  
+C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_common.h(116,1): warning C4005: 'b2_linearSleepTolerance': macro redefinition
+  (compiling source file 'src/dynamics/b2_motor_joint.cpp')
+  C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_settings.h(201,1):
+  see previous definition of 'b2_linearSleepTolerance'
+  
+C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_common.h(37,1): warning C4005: 'b2Assert': macro redefinition
+  (compiling source file 'src/dynamics/b2_mouse_joint.cpp')
+  C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_settings.h(38,1):
+  see previous definition of 'b2Assert'
+  
+C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_common.h(116,1): warning C4005: 'b2_linearSleepTolerance': macro redefinition
+  (compiling source file 'src/dynamics/b2_mouse_joint.cpp')
+  C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_settings.h(201,1):
+  see previous definition of 'b2_linearSleepTolerance'
+  
+C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_common.h(37,1): warning C4005: 'b2Assert': macro redefinition
+  (compiling source file 'src/dynamics/b2_polygon_contact.cpp')
+  C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_settings.h(38,1):
+  see previous definition of 'b2Assert'
+  
+C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_common.h(116,1): warning C4005: 'b2_linearSleepTolerance': macro redefinition
+  (compiling source file 'src/dynamics/b2_polygon_contact.cpp')
+  C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_settings.h(201,1):
+  see previous definition of 'b2_linearSleepTolerance'
+  
+C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_common.h(37,1): warning C4005: 'b2Assert': macro redefinition
+  (compiling source file 'src/dynamics/b2_polygon_circle_contact.cpp')
+  C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_settings.h(38,1):
+  see previous definition of 'b2Assert'
+  
+C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_common.h(116,1): warning C4005: 'b2_linearSleepTolerance': macro redefinition
+  (compiling source file 'src/dynamics/b2_polygon_circle_contact.cpp')
+  C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_settings.h(201,1):
+  see previous definition of 'b2_linearSleepTolerance'
+  
+  b2_revolute_joint.cpp
+C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_common.h(37,1): warning C4005: 'b2Assert': macro redefinition
+  (compiling source file 'src/dynamics/b2_prismatic_joint.cpp')
+  C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_settings.h(38,1):
+  see previous definition of 'b2Assert'
+  
+C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_common.h(116,1): warning C4005: 'b2_linearSleepTolerance': macro redefinition
+  (compiling source file 'src/dynamics/b2_prismatic_joint.cpp')
+  C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_settings.h(201,1):
+  see previous definition of 'b2_linearSleepTolerance'
+  
+C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_common.h(37,1): warning C4005: 'b2Assert': macro redefinition
+  (compiling source file 'src/dynamics/b2_pulley_joint.cpp')
+  C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_settings.h(38,1):
+  see previous definition of 'b2Assert'
+  
+C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_common.h(116,1): warning C4005: 'b2_linearSleepTolerance': macro redefinition
+  (compiling source file 'src/dynamics/b2_pulley_joint.cpp')
+  C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_settings.h(201,1):
+  see previous definition of 'b2_linearSleepTolerance'
+  
+  b2_weld_joint.cpp
+  b2_wheel_joint.cpp
+C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_common.h(37,1): warning C4005: 'b2Assert': macro redefinition
+  (compiling source file 'src/dynamics/b2_revolute_joint.cpp')
+  C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_settings.h(38,1):
+  see previous definition of 'b2Assert'
+  
+C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_common.h(116,1): warning C4005: 'b2_linearSleepTolerance': macro redefinition
+  (compiling source file 'src/dynamics/b2_revolute_joint.cpp')
+  C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_settings.h(201,1):
+  see previous definition of 'b2_linearSleepTolerance'
+  
+  b2_world.cpp
+  b2_world_callbacks.cpp
+  b2BlockAllocator.cpp
+C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_common.h(37,1): warning C4005: 'b2Assert': macro redefinition
+  (compiling source file 'src/dynamics/b2_weld_joint.cpp')
+  C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_settings.h(38,1):
+  see previous definition of 'b2Assert'
+  
+C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_common.h(116,1): warning C4005: 'b2_linearSleepTolerance': macro redefinition
+  (compiling source file 'src/dynamics/b2_weld_joint.cpp')
+  C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_settings.h(201,1):
+  see previous definition of 'b2_linearSleepTolerance'
+  
+  b2FreeList.cpp
+C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_common.h(37,1): warning C4005: 'b2Assert': macro redefinition
+  (compiling source file 'src/dynamics/b2_wheel_joint.cpp')
+  C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_settings.h(38,1):
+  see previous definition of 'b2Assert'
+  
+C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_common.h(116,1): warning C4005: 'b2_linearSleepTolerance': macro redefinition
+  (compiling source file 'src/dynamics/b2_wheel_joint.cpp')
+  C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_settings.h(201,1):
+  see previous definition of 'b2_linearSleepTolerance'
+  
+C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_common.h(37,1): warning C4005: 'b2Assert': macro redefinition
+  (compiling source file 'src/particle/b2BlockAllocator.cpp')
+  C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_settings.h(38,1):
+  see previous definition of 'b2Assert'
+  
+C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_common.h(116,1): warning C4005: 'b2_linearSleepTolerance': macro redefinition
+  (compiling source file 'src/particle/b2BlockAllocator.cpp')
+  C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_settings.h(201,1):
+  see previous definition of 'b2_linearSleepTolerance'
+  
+C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_common.h(37,1): warning C4005: 'b2Assert': macro redefinition
+  (compiling source file 'src/dynamics/b2_world_callbacks.cpp')
+  C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_settings.h(38,1):
+  see previous definition of 'b2Assert'
+  
+C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_common.h(116,1): warning C4005: 'b2_linearSleepTolerance': macro redefinition
+  (compiling source file 'src/dynamics/b2_world_callbacks.cpp')
+  C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_settings.h(201,1):
+  see previous definition of 'b2_linearSleepTolerance'
+  
+  b2Particle.cpp
+  b2ParticleAssembly.cpp
+C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_common.h(37,1): warning C4005: 'b2Assert': macro redefinition
+  (compiling source file 'src/dynamics/b2_world.cpp')
+  C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_settings.h(38,1):
+  see previous definition of 'b2Assert'
+  
+C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_common.h(116,1): warning C4005: 'b2_linearSleepTolerance': macro redefinition
+  (compiling source file 'src/dynamics/b2_world.cpp')
+  C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_settings.h(201,1):
+  see previous definition of 'b2_linearSleepTolerance'
+  
+C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_common.h(37,1): warning C4005: 'b2Assert': macro redefinition
+  (compiling source file 'src/particle/b2FreeList.cpp')
+  C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_settings.h(38,1):
+  see previous definition of 'b2Assert'
+  
+C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_common.h(116,1): warning C4005: 'b2_linearSleepTolerance': macro redefinition
+  (compiling source file 'src/particle/b2FreeList.cpp')
+  C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_settings.h(201,1):
+  see previous definition of 'b2_linearSleepTolerance'
+  
+  b2ParticleGroup.cpp
+  b2ParticleSystem.cpp
+  b2StackAllocator.cpp
+C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_common.h(37,1): warning C4005: 'b2Assert': macro redefinition
+  (compiling source file 'src/particle/b2ParticleAssembly.cpp')
+  C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_settings.h(38,1):
+  see previous definition of 'b2Assert'
+  
+C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_common.h(116,1): warning C4005: 'b2_linearSleepTolerance': macro redefinition
+  (compiling source file 'src/particle/b2ParticleAssembly.cpp')
+  C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_settings.h(201,1):
+  see previous definition of 'b2_linearSleepTolerance'
+  
+  b2TrackedBlock.cpp
+  b2VoronoiDiagram.cpp
+C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_common.h(37,1): warning C4005: 'b2Assert': macro redefinition
+  (compiling source file 'src/particle/b2Particle.cpp')
+  C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_settings.h(38,1):
+  see previous definition of 'b2Assert'
+  
+C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_common.h(116,1): warning C4005: 'b2_linearSleepTolerance': macro redefinition
+  (compiling source file 'src/particle/b2Particle.cpp')
+  C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_settings.h(201,1):
+  see previous definition of 'b2_linearSleepTolerance'
+  
+C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_common.h(37,1): warning C4005: 'b2Assert': macro redefinition
+  (compiling source file 'src/particle/b2StackAllocator.cpp')
+  C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_settings.h(38,1):
+  see previous definition of 'b2Assert'
+  
+C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_common.h(116,1): warning C4005: 'b2_linearSleepTolerance': macro redefinition
+  (compiling source file 'src/particle/b2StackAllocator.cpp')
+  C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_settings.h(201,1):
+  see previous definition of 'b2_linearSleepTolerance'
+  
+C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_common.h(37,1): warning C4005: 'b2Assert': macro redefinition
+  (compiling source file 'src/particle/b2ParticleGroup.cpp')
+  C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_settings.h(38,1):
+  see previous definition of 'b2Assert'
+  
+C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_common.h(116,1): warning C4005: 'b2_linearSleepTolerance': macro redefinition
+  (compiling source file 'src/particle/b2ParticleGroup.cpp')
+  C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_settings.h(201,1):
+  see previous definition of 'b2_linearSleepTolerance'
+  
+C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_common.h(37,1): warning C4005: 'b2Assert': macro redefinition
+  (compiling source file 'src/particle/b2TrackedBlock.cpp')
+  C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_settings.h(38,1):
+  see previous definition of 'b2Assert'
+  
+C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_common.h(116,1): warning C4005: 'b2_linearSleepTolerance': macro redefinition
+  (compiling source file 'src/particle/b2TrackedBlock.cpp')
+  C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_settings.h(201,1):
+  see previous definition of 'b2_linearSleepTolerance'
+  
+C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_common.h(37,1): warning C4005: 'b2Assert': macro redefinition
+  (compiling source file 'src/particle/b2VoronoiDiagram.cpp')
+  C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_settings.h(38,1):
+  see previous definition of 'b2Assert'
+  
+C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_common.h(116,1): warning C4005: 'b2_linearSleepTolerance': macro redefinition
+  (compiling source file 'src/particle/b2VoronoiDiagram.cpp')
+  C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_settings.h(201,1):
+  see previous definition of 'b2_linearSleepTolerance'
+  
+  b2_rope.cpp
+C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_common.h(37,1): warning C4005: 'b2Assert': macro redefinition
+  (compiling source file 'src/rope/b2_rope.cpp')
+  C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_settings.h(38,1):
+  see previous definition of 'b2Assert'
+  
+C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_common.h(116,1): warning C4005: 'b2_linearSleepTolerance': macro redefinition
+  (compiling source file 'src/rope/b2_rope.cpp')
+  C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_settings.h(201,1):
+  see previous definition of 'b2_linearSleepTolerance'
+  
+C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_common.h(37,1): warning C4005: 'b2Assert': macro redefinition
+  (compiling source file 'src/particle/b2ParticleSystem.cpp')
+  C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_settings.h(38,1):
+  see previous definition of 'b2Assert'
+  
+C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_common.h(116,1): warning C4005: 'b2_linearSleepTolerance': macro redefinition
+  (compiling source file 'src/particle/b2ParticleSystem.cpp')
+  C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_settings.h(201,1):
+  see previous definition of 'b2_linearSleepTolerance'
+  
+C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\src\particle\b2ParticleSystem.cpp(2746,16): warning C4858: discarding return value: The 'remove' and 'remove_if' algorithms return the iterator past the last element that should be kept. You need to call container.erase(result, container.end()) afterwards. In C++20, 'std::erase' and 'std::erase_if' are simpler replacements for these two steps.
+b2_stack_allocator.obj : warning LNK4006: "public: __cdecl b2StackAllocator::b2StackAllocator(void)" (??0b2StackAllocator@@QEAA@XZ) already defined in b2StackAllocator.obj; second definition ignored
+b2_stack_allocator.obj : warning LNK4006: "public: __cdecl b2StackAllocator::~b2StackAllocator(void)" (??1b2StackAllocator@@QEAA@XZ) already defined in b2StackAllocator.obj; second definition ignored
+b2_stack_allocator.obj : warning LNK4006: "public: void * __cdecl b2StackAllocator::Allocate(int)" (?Allocate@b2StackAllocator@@QEAAPEAXH@Z) already defined in b2StackAllocator.obj; second definition ignored
+b2_stack_allocator.obj : warning LNK4006: "public: void * __cdecl b2StackAllocator::Reallocate(void *,int)" (?Reallocate@b2StackAllocator@@QEAAPEAXPEAXH@Z) already defined in b2StackAllocator.obj; second definition ignored
+b2_stack_allocator.obj : warning LNK4006: "public: void __cdecl b2StackAllocator::Free(void *)" (?Free@b2StackAllocator@@QEAAXPEAX@Z) already defined in b2StackAllocator.obj; second definition ignored
+b2_stack_allocator.obj : warning LNK4006: "public: int __cdecl b2StackAllocator::GetMaxAllocation(void)const " (?GetMaxAllocation@b2StackAllocator@@QEBAHXZ) already defined in b2StackAllocator.obj; second definition ignored
+b2_block_allocator.obj : warning LNK4006: "public: __cdecl b2BlockAllocator::b2BlockAllocator(void)" (??0b2BlockAllocator@@QEAA@XZ) already defined in b2BlockAllocator.obj; second definition ignored
+b2_block_allocator.obj : warning LNK4006: "public: __cdecl b2BlockAllocator::~b2BlockAllocator(void)" (??1b2BlockAllocator@@QEAA@XZ) already defined in b2BlockAllocator.obj; second definition ignored
+b2_block_allocator.obj : warning LNK4006: "public: void * __cdecl b2BlockAllocator::Allocate(int)" (?Allocate@b2BlockAllocator@@QEAAPEAXH@Z) already defined in b2BlockAllocator.obj; second definition ignored
+b2_block_allocator.obj : warning LNK4006: "public: void __cdecl b2BlockAllocator::Free(void *,int)" (?Free@b2BlockAllocator@@QEAAXPEAXH@Z) already defined in b2BlockAllocator.obj; second definition ignored
+b2_block_allocator.obj : warning LNK4006: "public: void __cdecl b2BlockAllocator::Clear(void)" (?Clear@b2BlockAllocator@@QEAAXXZ) already defined in b2BlockAllocator.obj; second definition ignored
+  box2d.vcxproj -> C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\bin\Debug\box2d\box2d.lib

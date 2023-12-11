@@ -83,6 +83,11 @@ void b2ChainShape::CreateChain(const b2Vec2* vertices, int32 count,	const b2Vec2
 	m_nextVertex = nextVertex;
 }
 
+// Empty
+void b2ChainShape::ComputeDistance(const b2Transform& xf, const b2Vec2& p, float32* distance, b2Vec2* normal, int32 childIndex) const {
+
+};
+
 b2Shape* b2ChainShape::Clone(b2BlockAllocator* allocator) const
 {
 	void* mem = allocator->Allocate(sizeof(b2ChainShape));

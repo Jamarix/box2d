@@ -50,6 +50,8 @@ public:
 	/// @see b2Shape::ComputeAABB
 	void ComputeAABB(b2AABB* aabb, const b2Transform& transform, int32 childIndex) const override;
 
+	void ComputeDistance(const b2Transform& xf, const b2Vec2& p, float32* distance, b2Vec2* normal, int32 childIndex) const override;
+
 	/// @see b2Shape::ComputeMass
 	void ComputeMass(b2MassData* massData, float density) const override;
 

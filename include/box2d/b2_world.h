@@ -184,6 +184,9 @@ public:
 	/// The minimum is 1.
 	float GetTreeQuality() const;
 
+	b2BlockAllocator& GetBlockAllocator();
+	b2StackAllocator& GetStackAllocator();
+
 	/// Change the global gravity vector.
 	void SetGravity(const b2Vec2& gravity);
 
@@ -243,7 +246,9 @@ private:
 	b2Vec2 m_gravity;
 	bool m_allowSleep;
 
+public:
 	b2DestructionListener* m_destructionListener;
+private:
 	b2Draw* m_debugDraw;
 
 	// This is used to compute the time step ratio to
@@ -317,6 +322,10 @@ inline void b2World::SetGravity(const b2Vec2& gravity)
 inline b2Vec2 b2World::GetGravity() const
 {
 	return m_gravity;
+}
+
+inline b2BlockAllocator& b2World::GetBlockAllocator() {
+	return m_blockAllocator;
 }
 
 inline bool b2World::IsLocked() const

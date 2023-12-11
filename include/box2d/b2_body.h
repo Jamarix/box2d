@@ -435,7 +435,10 @@ private:
 
 	int32 m_islandIndex;
 
+public:
 	b2Transform m_xf;		// the body origin transform
+	b2Transform m_xf0;		// the previous transform for particle simulation
+private:
 	b2Sweep m_sweep;		// the swept motion for CCD
 
 	b2Vec2 m_linearVelocity;

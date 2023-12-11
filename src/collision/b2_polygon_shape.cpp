@@ -33,6 +33,9 @@ b2PolygonShape::b2PolygonShape()
 	m_centroid.SetZero();
 }
 
+// Empty
+void b2PolygonShape::ComputeDistance(const b2Transform& xf, const b2Vec2& p, float32* distance, b2Vec2* normal, int32 childIndex) const {};
+
 b2Shape* b2PolygonShape::Clone(b2BlockAllocator* allocator) const
 {
 	void* mem = allocator->Allocate(sizeof(b2PolygonShape));
