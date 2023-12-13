@@ -1148,8 +1148,8 @@ private:
 	b2ParticleSystemDef m_def;
 
 	b2World* m_world;
-	b2ParticleSystem* m_prev;
-	b2ParticleSystem* m_next;
+	b2ParticleSystem* m_prev = nullptr;
+	b2ParticleSystem* m_next = nullptr;
 };
 
 inline void b2ParticleContact::SetIndices(int32 a, int32 b)

@@ -27,6 +27,7 @@
 #include "b2_settings.h"
 #include "b2_collision.h"
 #include "b2_dynamic_tree.h"
+#include <algorithm>
 
 struct B2_API b2Pair
 {
@@ -131,6 +132,22 @@ private:
 
 	int32 m_queryProxyId;
 };
+
+/// This is used to sort pairs.
+inline bool b2PairLessThan(const b2Pair& pair1, const b2Pair& pair2)
+{
+	if (pair1.proxyIdA < pair2.proxyIdA)
+	{
+		return true;
+	}
+
+	if (pair1.proxyIdA == pair2.proxyIdA)
+	{
+		return pair1.proxyIdB < pair2.proxyIdB;
+	}
+
+	return false;
+}
 
 inline void* b2BroadPhase::GetUserData(int32 proxyId) const
 {

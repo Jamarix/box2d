@@ -1,6 +1,7 @@
 // MIT License
 
 // Copyright (c) 2019 Erin Catto
+// Copyright (c) 2013 Google, Inc.
 
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -30,6 +31,7 @@
 #include "b2_stack_allocator.h"
 #include "b2_time_step.h"
 #include "b2_world_callbacks.h"
+#include <box2d/b2ParticleSystem.h> // From LiquidFun library
 
 struct b2AABB;
 struct b2BodyDef;
@@ -39,6 +41,7 @@ class b2Body;
 class b2Draw;
 class b2Fixture;
 class b2Joint;
+class b2ParticleGroup; // From LiquidFun library
 
 /// The world class manages all physics entities, dynamic simulation,
 /// and asynchronous queries. The world also contains efficient memory
@@ -91,6 +94,32 @@ public:
 	/// @warning This function is locked during callbacks.
 	void DestroyJoint(b2Joint* joint);
 
+	/// Create a particle system given a definition. No reference to the
+	/// definition is retained.
+	/// @warning This function is locked during callbacks.
+	b2ParticleSystem* CreateParticleSystem(const b2ParticleSystemDef* def);
+
+	/// Destroy a particle system.
+	/// @warning This function is locked during callbacks.
+	void DestroyParticleSystem(b2ParticleSystem* p);
+
+	/// Take a time step. This performs collision detection, integration,
+	/// and constraint solution.
+	/// For the numerical stability of particles, minimize the following
+	/// dimensionless gravity acceleration:
+	///     gravity / particleRadius * (timeStep / particleIterations)^2
+	/// b2CalculateParticleIterations() or
+	/// CalculateReasonableParticleIterations() help to determine the optimal
+	/// particleIterations.
+	/// @param timeStep the amount of time to simulate, this should not vary.
+	/// @param velocityIterations for the velocity constraint solver.
+	/// @param positionIterations for the position constraint solver.
+	/// @param particleIterations for the particle simulation.
+	void Step(float32 timeStep,
+		int32 velocityIterations,
+		int32 positionIterations,
+		int32 particleIterations);
+
 	/// Take a time step. This performs collision detection, integration,
 	/// and constraint solution.
 	/// @param timeStep the amount of time to simulate, this should not vary.
@@ -99,6 +128,13 @@ public:
 	void Step(	float timeStep,
 				int32 velocityIterations,
 				int32 positionIterations);
+
+	/// Recommend a value to be used in `Step` for `particleIterations`.
+	/// This calculation is necessarily a simplification and should only be
+	/// used as a starting point. Please see "Particle Iterations" in the
+	/// Programmer's Guide for details.
+	/// @param timeStep is the value to be passed into `Step`.
+	int CalculateReasonableParticleIterations(float32 timeStep) const;
 
 	/// Manually clear the force buffer on all bodies. By default, forces are cleared automatically
 	/// after each call to Step. The default behavior is modified by calling SetAutoClearForces.
@@ -117,6 +153,9 @@ public:
 	/// @param callback a user implemented callback class.
 	/// @param aabb the query box.
 	void QueryAABB(b2QueryCallback* callback, const b2AABB& aabb) const;
+
+	void QueryShapeAABB(b2QueryCallback* callback, const b2Shape& shape,
+		const b2Transform& xf) const;
 
 	/// Ray-cast the world for all fixtures in the path of the ray. Your callback
 	/// controls whether you get the closest point, any point, or n-points.
@@ -137,6 +176,13 @@ public:
 	/// @return the head of the world joint list.
 	b2Joint* GetJointList();
 	const b2Joint* GetJointList() const;
+
+	/// Get the world particle-system list. With the returned body, use
+	/// b2ParticleSystem::GetNext to get the next particle-system in the world
+	/// list. A NULL particle-system indicates the end of the list.
+	/// @return the head of the world particle-system list.
+	b2ParticleSystem* GetParticleSystemList();
+	const b2ParticleSystem* GetParticleSystemList() const;
 
 	/// Get the world contact list. With the returned contact, use b2Contact::GetNext to get
 	/// the next contact in the world list. A nullptr contact indicates the end of the list.
@@ -217,12 +263,43 @@ public:
 	/// @warning this should be called outside of a time step.
 	void Dump();
 
+	/// Get API version.
+	const b2Version* GetVersion() const {
+		return m_liquidFunVersion;
+	}
+
+	/// Get API version string.
+	const char* GetVersionString() const {
+		return m_liquidFunVersionString;
+	}
+
+#if LIQUIDFUN_EXTERNAL_LANGUAGE_API
+public:
+	/// Constructor which takes direct floats.
+	b2World(float32 gravityX, float32 gravityY);
+
+	/// Set gravity with direct floats.
+	void SetGravity(float32 gravityX, float32 gravityY);
+#endif // LIQUIDFUN_EXTERNAL_LANGUAGE_API
+
 private:
+
+	// m_flags
+	enum
+	{
+		e_newFixture = 0x0001,
+		e_locked = 0x0002,
+		e_clearForces = 0x0004
+	};
 
 	friend class b2Body;
 	friend class b2Fixture;
 	friend class b2ContactManager;
 	friend class b2Controller;
+	friend class b2ParticleSystem;
+
+	// From LiquidFun library
+	void Init(const b2Vec2& gravity);
 
 	b2World(const b2World&) = delete;
 	void operator=(const b2World&) = delete;
@@ -230,15 +307,22 @@ private:
 	void Solve(const b2TimeStep& step);
 	void SolveTOI(const b2TimeStep& step);
 
+	void DrawJoint(b2Joint* joint);
 	void DrawShape(b2Fixture* shape, const b2Transform& xf, const b2Color& color);
+
+	// From LiquidFun library
+	void DrawParticleSystem(const b2ParticleSystem& system);
 
 	b2BlockAllocator m_blockAllocator;
 	b2StackAllocator m_stackAllocator;
+
+	int32 m_flags;
 
 	b2ContactManager m_contactManager;
 
 	b2Body* m_bodyList;
 	b2Joint* m_jointList;
+	b2ParticleSystem* m_particleSystemList = nullptr; // From LiquidFun library
 
 	int32 m_bodyCount;
 	int32 m_jointCount;
@@ -267,6 +351,11 @@ private:
 	bool m_stepComplete;
 
 	b2Profile m_profile;
+
+	/// Used to reference b2_LiquidFunVersion so that it's not stripped from
+	/// the static library.
+	const b2Version* m_liquidFunVersion;
+	const char* m_liquidFunVersionString;
 };
 
 inline b2Body* b2World::GetBodyList()
@@ -287,6 +376,16 @@ inline b2Joint* b2World::GetJointList()
 inline const b2Joint* b2World::GetJointList() const
 {
 	return m_jointList;
+}
+
+inline b2ParticleSystem* b2World::GetParticleSystemList()
+{
+	return m_particleSystemList;
+}
+
+inline const b2ParticleSystem* b2World::GetParticleSystemList() const
+{
+	return m_particleSystemList;
 }
 
 inline b2Contact* b2World::GetContactList()
@@ -326,6 +425,10 @@ inline b2Vec2 b2World::GetGravity() const
 
 inline b2BlockAllocator& b2World::GetBlockAllocator() {
 	return m_blockAllocator;
+}
+
+inline b2StackAllocator& b2World::GetStackAllocator() {
+	return m_stackAllocator;
 }
 
 inline bool b2World::IsLocked() const

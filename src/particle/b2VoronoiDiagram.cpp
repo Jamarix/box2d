@@ -21,19 +21,18 @@
 #include <box2d/b2StackQueue.h>
 //#include <Box2D/Collision/b2Collision.h>
 #include <box2d/b2_collision.h>
+#include <iostream>
 
 b2VoronoiDiagram::b2VoronoiDiagram(
 	b2StackAllocator* allocator, int32 generatorCapacity)
 {
 	m_allocator = allocator;
-	m_generatorBuffer =
-		(Generator*) allocator->Allocate(
-			sizeof(Generator) * generatorCapacity);
+	m_generatorBuffer = (Generator*) allocator->Allocate(sizeof(Generator) * generatorCapacity);
 	m_generatorCapacity = generatorCapacity;
 	m_generatorCount = 0;
 	m_countX = 0;
 	m_countY = 0;
-	m_diagram = NULL;
+	m_diagram = nullptr;
 }
 
 b2VoronoiDiagram::~b2VoronoiDiagram()
@@ -57,7 +56,7 @@ void b2VoronoiDiagram::AddGenerator(
 
 void b2VoronoiDiagram::Generate(float32 radius, float32 margin)
 {
-	b2Assert(m_diagram == NULL);
+	b2Assert(m_diagram == nullptr);
 	float32 inverseRadius = 1 / radius;
 	b2Vec2 lower(+b2_maxFloat, +b2_maxFloat);
 	b2Vec2 upper(-b2_maxFloat, -b2_maxFloat);
@@ -80,7 +79,7 @@ void b2VoronoiDiagram::Generate(float32 radius, float32 margin)
 		m_allocator->Allocate(sizeof(Generator*) * m_countX * m_countY);
 	for (int32 i = 0; i < m_countX * m_countY; i++)
 	{
-		m_diagram[i] = NULL;
+		m_diagram[i] = nullptr;
 	}
 	// (4 * m_countX * m_countY) is the queue capacity that is experimentally
 	// known to be necessary and sufficient for general particle distributions.

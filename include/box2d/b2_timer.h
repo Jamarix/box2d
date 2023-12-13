@@ -1,6 +1,7 @@
 // MIT License
 
 // Copyright (c) 2019 Erin Catto
+// Copyright (c) 2014 Google, Inc.
 
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -42,6 +43,9 @@ public:
 	float GetMilliseconds() const;
 
 private:
+	// From LiquidFun library
+	/// Get platform specific tick count
+	static double GetTicks();
 
 #if defined(_WIN32)
 	double m_start;

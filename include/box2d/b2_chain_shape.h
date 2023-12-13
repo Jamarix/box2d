@@ -1,6 +1,7 @@
 // MIT License
 
 // Copyright (c) 2019 Erin Catto
+// Copyright (c) 2013 Google, Inc.
 
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -90,6 +91,7 @@ public:
 	int32 m_count;
 
 	b2Vec2 m_prevVertex, m_nextVertex;
+	bool m_hasPrevVertex, m_hasNextVertex;
 };
 
 inline b2ChainShape::b2ChainShape()
@@ -98,6 +100,8 @@ inline b2ChainShape::b2ChainShape()
 	m_radius = b2_polygonRadius;
 	m_vertices = nullptr;
 	m_count = 0;
+	m_hasPrevVertex = false;
+	m_hasNextVertex = false;
 }
 
 #endif

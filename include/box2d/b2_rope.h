@@ -118,8 +118,23 @@ public:
 	///
 	void Reset(const b2Vec2& position);
 
+	// From LiquidFun library
+	int32 GetVertexCount() const
+	{
+		return m_count;
+	}
+
+	// From LiquidFun library
+	const b2Vec2* GetVertices() const
+	{
+		return m_ps;
+	}
+
 	///
 	void Draw(b2Draw* draw) const;
+
+	// From LiquidFun library
+	void SetAngle(float32 angle);
 
 private:
 
@@ -131,6 +146,21 @@ private:
 	void SolveBend_PBD_Height();
 	void SolveBend_PBD_Triangle();
 	void ApplyBendForces(float dt);
+
+	// From LiquidFun library
+	void SolveC2();
+	void SolveC3();
+
+	float32* m_ims;
+
+	float32* m_Ls;
+	float32* m_as;
+
+	float32 m_damping;
+
+	float32 m_k2;
+	float32 m_k3;
+	// 
 
 	b2Vec2 m_position;
 

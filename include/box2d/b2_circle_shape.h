@@ -1,6 +1,7 @@
 // MIT License
 
 // Copyright (c) 2019 Erin Catto
+// Copyright (c) 2013 Google, Inc.
 
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -55,6 +56,35 @@ public:
 	/// @see b2Shape::ComputeMass
 	void ComputeMass(b2MassData* massData, float density) const override;
 
+	// From LiquidFun library
+	/// Get the supporting vertex index in the given direction.
+	int32 GetSupport(const b2Vec2& d) const;
+
+	// From LiquidFun library
+	/// Get the supporting vertex in the given direction.
+	const b2Vec2& GetSupportVertex(const b2Vec2& d) const;
+
+	// From LiquidFun library
+	/// Get the vertex count.
+	int32 GetVertexCount() const { return 1; }
+
+	// From LiquidFun library
+	/// Get a vertex by index. Used by b2Distance.
+	const b2Vec2& GetVertex(int32 index) const;
+
+	// From LiquidFun library
+#if LIQUIDFUN_EXTERNAL_LANGUAGE_API
+public:
+	/// Set position with direct floats.
+	void SetPosition(float32 x, float32 y) { m_p.Set(x, y); }
+
+	/// Get x-coordinate of position.
+	float32 GetPositionX() const { return m_p.x; }
+
+	/// Get y-coordinate of position.
+	float32 GetPositionY() const { return m_p.y; }
+#endif // LIQUIDFUN_EXTERNAL_LANGUAGE_API
+
 	/// Position
 	b2Vec2 m_p;
 };
@@ -64,6 +94,26 @@ inline b2CircleShape::b2CircleShape()
 	m_type = e_circle;
 	m_radius = 0.0f;
 	m_p.SetZero();
+}
+
+// From LiquidFun library
+inline int32 b2CircleShape::GetSupport(const b2Vec2& d) const
+{
+	B2_NOT_USED(d);
+	return 0;
+}
+// From LiquidFun library
+inline const b2Vec2& b2CircleShape::GetSupportVertex(const b2Vec2& d) const
+{
+	B2_NOT_USED(d);
+	return m_p;
+}
+// From LiquidFun library
+inline const b2Vec2& b2CircleShape::GetVertex(int32 index) const
+{
+	B2_NOT_USED(index);
+	b2Assert(index == 0);
+	return m_p;
 }
 
 #endif

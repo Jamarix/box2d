@@ -25,9 +25,9 @@
 #include <string.h>
 #include <stddef.h>
 
-static const int32 b2_chunkSize = 16 * 1024;
-static const int32 b2_maxBlockSize = 640;
-static const int32 b2_chunkArrayIncrement = 128;
+//static const int32 b2_chunkSize = 16 * 1024;
+//static const int32 b2_maxBlockSize = 640;
+//static const int32 b2_chunkArrayIncrement = 128;
 
 // These are the supported object sizes. Actual allocations are rounded up the next size.
 static const int32 b2_blockSizes[b2_blockSizeCount] =

@@ -82,8 +82,8 @@ private:
 		}
 	};
 
-	b2StackAllocator *m_allocator;
-	Generator* m_generatorBuffer;
+	b2StackAllocator *m_allocator = nullptr;
+	Generator* m_generatorBuffer = nullptr;
 	int32 m_generatorCapacity;
 	int32 m_generatorCount;
 	int32 m_countX, m_countY;

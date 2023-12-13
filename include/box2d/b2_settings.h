@@ -1,6 +1,7 @@
 // MIT License
 
 // Copyright (c) 2019 Erin Catto
+// Copyright (c) 2013 Google, Inc.
 
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -153,6 +154,39 @@ struct B2_API b2JointUserData
 	uintptr_t pointer;
 };
 
+// Dynamics
+
+/// Maximum number of contacts to be handled to solve a TOI impact.
+#define b2_maxTOIContacts			32
+
+/// A velocity threshold for elastic collisions. Any collision with a relative linear
+/// velocity below this threshold will be treated as inelastic.
+#define b2_velocityThreshold		1.0f
+
+/// The maximum linear position correction used when solving constraints. This helps to
+/// prevent overshoot.
+#define b2_maxLinearCorrection		0.2f
+
+/// The maximum angular position correction used when solving constraints. This helps to
+/// prevent overshoot.
+#define b2_maxAngularCorrection		(8.0f / 180.0f * b2_pi)
+
+/// The maximum linear velocity of a body. This limit is very large and is used
+/// to prevent numerical problems. You shouldn't need to adjust this.
+#define b2_maxTranslation			2.0f
+#define b2_maxTranslationSquared	(b2_maxTranslation * b2_maxTranslation)
+
+/// The maximum angular velocity of a body. This limit is very large and is used
+/// to prevent numerical problems. You shouldn't need to adjust this.
+#define b2_maxRotation				(0.5f * b2_pi)
+#define b2_maxRotationSquared		(b2_maxRotation * b2_maxRotation)
+
+/// This scale factor controls how fast overlap is resolved. Ideally this would be 1 so
+/// that overlap is removed in one time step. However using values close to 1 often lead
+/// to overshoot.
+#define b2_baumgarte				0.2f
+#define b2_toiBaugarte				0.75f
+
 // Particle
 
 /// NEON SIMD requires 16-bit particle indices
@@ -160,26 +194,44 @@ struct B2_API b2JointUserData
 #define B2_USE_16_BIT_PARTICLE_INDICES
 #endif
 
+// From LiquidFun library
 /// A symbolic constant that stands for particle allocation error.
 #define b2_invalidParticleIndex		(-1)
 
+// From LiquidFun library
 #ifdef B2_USE_16_BIT_PARTICLE_INDICES
 #define b2_maxParticleIndex			0x7FFF
 #else
 #define b2_maxParticleIndex			0x7FFFFFFF
 #endif
 
+// From LiquidFun library
 /// The default distance between particles, multiplied by the particle diameter.
 #define b2_particleStride			0.75f
 
+// From LiquidFun library
 /// The minimum particle weight that produces pressure.
 #define b2_minParticleWeight			1.0f
 
+// From LiquidFun library
 /// The upper limit for particle pressure.
 #define b2_maxParticlePressure		0.25f
 
+// From LiquidFun library
 /// The upper limit for force between particles.
 #define b2_maxParticleForce		0.5f
+
+/// The maximum distance between particles in a triad, multiplied by the
+/// particle diameter.
+#define b2_maxTriadDistance			2
+#define b2_maxTriadDistanceSquared		(b2_maxTriadDistance * b2_maxTriadDistance)
+
+/// The initial size of particle data buffers.
+#define b2_minParticleSystemBufferCapacity	256
+
+/// The time into the future that collisions against barrier particles will be detected.
+#define b2_barrierCollisionTime 2.5f
+
 
 /// The maximum distance between particles in a triad, multiplied by the
 /// particle diameter.

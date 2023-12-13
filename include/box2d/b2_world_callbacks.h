@@ -1,6 +1,7 @@
 // MIT License
 
 // Copyright (c) 2019 Erin Catto
+// Copyright (c) 2013 Google, Inc.
 
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -220,6 +221,7 @@ public:
 	/// @return false to terminate the query.
 	virtual bool ReportFixture(b2Fixture* fixture) = 0;
 
+	// From LiquidFun library 
 	/// Called for each particle found in the query AABB.
 	/// @return false to terminate the query.
 	virtual bool ReportParticle(const b2ParticleSystem* particleSystem,
@@ -230,6 +232,7 @@ public:
 		return false;
 	}
 
+	// From LiquidFun library 
 	/// Cull an entire particle system from b2World::QueryAABB. Ignored for
 	/// b2ParticleSystem::QueryAABB.
 	/// @return true if you want to include particleSystem in the AABB query,
@@ -264,6 +267,7 @@ public:
 	virtual float ReportFixture(	b2Fixture* fixture, const b2Vec2& point,
 									const b2Vec2& normal, float fraction) = 0;
 
+	// From LiquidFun library
 	/// Called for each particle found in the query. You control how the ray
 	/// cast proceeds by returning a float:
 	/// return <=0: ignore the remaining particles in this particle system
@@ -291,6 +295,7 @@ public:
 		return 0;
 	}
 
+	// From LiquidFun library
 	/// Cull an entire particle system from b2World::RayCast. Ignored in
 	/// b2ParticleSystem::RayCast.
 	/// @return true if you want to include particleSystem in the RayCast, or

@@ -1,6 +1,7 @@
 // MIT License
 
 // Copyright (c) 2019 Erin Catto
+// Copyright (c) 2013 Google, Inc.
 
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -77,19 +78,65 @@ public:
 	/// @see b2Shape::ComputeAABB
 	void ComputeAABB(b2AABB* aabb, const b2Transform& transform, int32 childIndex) const override;
 
+	// @see b2Shape::ComputeDistance
 	void ComputeDistance(const b2Transform& xf, const b2Vec2& p, float32* distance, b2Vec2* normal, int32 childIndex) const override;
 
 	/// @see b2Shape::ComputeMass
 	void ComputeMass(b2MassData* massData, float density) const override;
+	
+	// From LiquidFun library
+	/// Get the vertex count.
+	int32 GetVertexCount() const { return m_count; }
+
+	// From LiquidFun library
+	/// Get a vertex by index.
+	const b2Vec2& GetVertex(int32 index) const;
 
 	/// Validate convexity. This is a very time consuming operation.
 	/// @returns true if valid
 	bool Validate() const;
+
+	// From LiquidFun library
+#if LIQUIDFUN_EXTERNAL_LANGUAGE_API
+public:
+	/// Set centroid with direct floats.
+	void SetCentroid(float32 x, float32 y);
+
+	/// SetAsBox with direct floats for center.
+	/// @see b2Shape::SetAsBox
+	void SetAsBox(float32 hx,
+		float32 hy,
+		float32 centerX,
+		float32 centerY,
+		float32 angle);
+#endif // LIQUIDFUN_EXTERNAL_LANGUAGE_API
 
 	b2Vec2 m_centroid;
 	b2Vec2 m_vertices[b2_maxPolygonVertices];
 	b2Vec2 m_normals[b2_maxPolygonVertices];
 	int32 m_count;
 };
+
+// From LiquidFun library
+inline const b2Vec2& b2PolygonShape::GetVertex(int32 index) const
+{
+	b2Assert(0 <= index && index < m_count);
+	return m_vertices[index];
+}
+
+#if LIQUIDFUN_EXTERNAL_LANGUAGE_API
+inline void b2PolygonShape::SetCentroid(float32 x, float32 y)
+{
+	m_centroid.Set(x, y);
+}
+
+inline void b2PolygonShape::SetAsBox(float32 hx,
+	float32 hy,
+	float32 centerX,
+	float32 centerY,
+	float32 angle) {
+	SetAsBox(hx, hy, b2Vec2(centerX, centerY), angle);
+}
+#endif // LIQUIDFUN_EXTERNAL_LANGUAGE_API
 
 #endif
