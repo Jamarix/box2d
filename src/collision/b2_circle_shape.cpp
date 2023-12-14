@@ -1,6 +1,7 @@
 // MIT License
 
 // Copyright (c) 2019 Erin Catto
+// Copyright (c) 2013 Google, Inc.
 
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -46,7 +47,15 @@ bool b2CircleShape::TestPoint(const b2Transform& transform, const b2Vec2& p) con
 }
 
 // Empty
-void b2CircleShape::ComputeDistance(const b2Transform& xf, const b2Vec2& p, float32* distance, b2Vec2* normal, int32 childIndex) const {};
+void b2CircleShape::ComputeDistance(const b2Transform& xf, const b2Vec2& p, float32* distance, b2Vec2* normal, int32 childIndex) const {
+	B2_NOT_USED(childIndex);
+
+	b2Vec2 center = xf.p + b2Mul(xf.q, m_p);
+	b2Vec2 d = p - center;
+	float32 d1 = d.Length();
+	*distance = d1 - m_radius;
+	*normal = 1 / d1 * d;
+};
 
 // Collision Detection in Interactive 3D Environments by Gino van den Bergen
 // From Section 3.1.2

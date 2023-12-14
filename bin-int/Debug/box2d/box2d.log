@@ -1,9 +1,52 @@
-﻿  b2_rope.cpp
+﻿  b2_chain_shape.cpp
+  b2_circle_shape.cpp
+  b2_edge_shape.cpp
+  b2_polygon_shape.cpp
+  b2_settings.cpp
+  b2_timer.cpp
+  b2_body.cpp
+  b2_world.cpp
 C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_common.h(37,1): warning C4005: 'b2Assert': macro redefinition
-  (compiling source file 'src/rope/b2_rope.cpp')
+  (compiling source file 'src/common/b2_settings.cpp')
   C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_settings.h(39,1):
   see previous definition of 'b2Assert'
   
+C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_common.h(37,1): warning C4005: 'b2Assert': macro redefinition
+  (compiling source file 'src/collision/b2_circle_shape.cpp')
+  C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_settings.h(39,1):
+  see previous definition of 'b2Assert'
+  
+C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_common.h(37,1): warning C4005: 'b2Assert': macro redefinition
+  (compiling source file 'src/common/b2_timer.cpp')
+  C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_settings.h(39,1):
+  see previous definition of 'b2Assert'
+  
+C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_common.h(37,1): warning C4005: 'b2Assert': macro redefinition
+  (compiling source file 'src/dynamics/b2_world.cpp')
+  C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_settings.h(39,1):
+  see previous definition of 'b2Assert'
+  
+C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_common.h(37,1): warning C4005: 'b2Assert': macro redefinition
+  (compiling source file 'src/collision/b2_chain_shape.cpp')
+  C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_settings.h(39,1):
+  see previous definition of 'b2Assert'
+  
+C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_common.h(37,1): warning C4005: 'b2Assert': macro redefinition
+  (compiling source file 'src/dynamics/b2_body.cpp')
+  C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_settings.h(39,1):
+  see previous definition of 'b2Assert'
+  
+C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_common.h(37,1): warning C4005: 'b2Assert': macro redefinition
+  (compiling source file 'src/collision/b2_edge_shape.cpp')
+  C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_settings.h(39,1):
+  see previous definition of 'b2Assert'
+  
+C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_common.h(37,1): warning C4005: 'b2Assert': macro redefinition
+  (compiling source file 'src/collision/b2_polygon_shape.cpp')
+  C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include\box2d\b2_settings.h(39,1):
+  see previous definition of 'b2Assert'
+  
+C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\src\common\b2_timer.cpp(45,21): warning C4244: 'return': conversion from 'LONGLONG' to 'double', possible loss of data
 b2_stack_allocator.obj : warning LNK4006: "public: __cdecl b2StackAllocator::b2StackAllocator(void)" (??0b2StackAllocator@@QEAA@XZ) already defined in b2StackAllocator.obj; second definition ignored
 b2_stack_allocator.obj : warning LNK4006: "public: __cdecl b2StackAllocator::~b2StackAllocator(void)" (??1b2StackAllocator@@QEAA@XZ) already defined in b2StackAllocator.obj; second definition ignored
 b2_stack_allocator.obj : warning LNK4006: "public: void * __cdecl b2StackAllocator::Allocate(int)" (?Allocate@b2StackAllocator@@QEAAPEAXH@Z) already defined in b2StackAllocator.obj; second definition ignored

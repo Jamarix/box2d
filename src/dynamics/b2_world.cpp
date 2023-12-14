@@ -1,6 +1,7 @@
 // MIT License
 
 // Copyright (c) 2019 Erin Catto
+// Copyright (c) 2013 Google, Inc.
 
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -95,6 +96,10 @@ b2World::~b2World()
 	{
 		DestroyParticleSystem(m_particleSystemList);
 	}
+
+	// Even though the block allocator frees them for us, for safety,
+	// we should ensure that all buffers have been freed.
+	b2Assert(m_blockAllocator.GetNumGiantAllocations() == 0);
 }
 
 void b2World::SetDestructionListener(b2DestructionListener* listener)
@@ -402,7 +407,7 @@ b2ParticleSystem* b2World::CreateParticleSystem(const b2ParticleSystemDef* def)
 
 void b2World::DestroyParticleSystem(b2ParticleSystem* p)
 {
-	b2Assert(m_particleSystemList != NULL);
+	b2Assert(m_particleSystemList != nullptr);
 	b2Assert(IsLocked() == false);
 	if (IsLocked())
 	{
@@ -924,6 +929,7 @@ void b2World::SolveTOI(const b2TimeStep& step)
 		subStep.dtRatio = 1.0f;
 		subStep.positionIterations = 20;
 		subStep.velocityIterations = step.velocityIterations;
+		subStep.particleIterations = step.particleIterations;
 		subStep.warmStarting = false;
 		island.SolveTOI(subStep, bA->m_islandIndex, bB->m_islandIndex);
 
@@ -959,7 +965,11 @@ void b2World::SolveTOI(const b2TimeStep& step)
 	}
 }
 
-void b2World::Step(float32 dt, int32 velocityIterations, int32 positionIterations, int32 particleIterations)
+// From LiquidFun library
+void b2World::Step(float32 dt, 
+	int32 velocityIterations, 
+	int32 positionIterations, 
+	int32 particleIterations)
 {
 	b2Timer stepTimer;
 
@@ -1127,6 +1137,14 @@ void b2World::QueryAABB(b2QueryCallback* callback, const b2AABB& aabb) const
 	wrapper.broadPhase = &m_contactManager.m_broadPhase;
 	wrapper.callback = callback;
 	m_contactManager.m_broadPhase.Query(&wrapper, aabb);
+	// From LiquidFun library
+	for (b2ParticleSystem* p = m_particleSystemList; p; p = p->GetNext())
+	{
+		if (callback->ShouldQueryParticleSystem(p))
+		{
+			p->QueryAABB(callback, aabb);
+		}
+	}
 }
 
 void b2World::QueryShapeAABB(b2QueryCallback* callback, const b2Shape& shape,
@@ -1172,6 +1190,14 @@ void b2World::RayCast(b2RayCastCallback* callback, const b2Vec2& point1, const b
 	input.p1 = point1;
 	input.p2 = point2;
 	m_contactManager.m_broadPhase.RayCast(&wrapper, input);
+	// From LiquidFun library
+	for (b2ParticleSystem* p = m_particleSystemList; p; p = p->GetNext())
+	{
+		if (callback->ShouldQueryParticleSystem(p))
+		{
+			p->RayCast(callback, point1, point2);
+		}
+	}
 }
 
 void b2World::DrawShape(b2Fixture* fixture, const b2Transform& xf, const b2Color& color)
@@ -1238,7 +1264,7 @@ void b2World::DrawShape(b2Fixture* fixture, const b2Transform& xf, const b2Color
 		break;
 
 	default:
-	break;
+		break;
 	}
 }
 
@@ -1297,7 +1323,7 @@ void b2World::DrawParticleSystem(const b2ParticleSystem& system)
 		}
 		else
 		{
-			m_debugDraw->DrawParticles(positionBuffer, radius, NULL, particleCount);
+			m_debugDraw->DrawParticles(positionBuffer, radius, nullptr, particleCount);
 		}
 	}
 }
@@ -1368,6 +1394,7 @@ void b2World::DebugDraw()
 		b2Color color(0.3f, 0.9f, 0.9f);
 		for (b2Contact* c = m_contactManager.m_contactList; c; c = c->GetNext())
 		{
+			// It is commented in LiquidFun library, but I'll leave it 
 			b2Fixture* fixtureA = c->GetFixtureA();
 			b2Fixture* fixtureB = c->GetFixtureB();
 			int32 indexA = c->GetChildIndexA();
@@ -1376,6 +1403,7 @@ void b2World::DebugDraw()
 			b2Vec2 cB = fixtureB->GetAABB(indexB).GetCenter();
 
 			m_debugDraw->DrawSegment(cA, cB, color);
+			// 
 		}
 	}
 
@@ -1434,13 +1462,13 @@ static float GetSmallestRadius(const b2World* world)
 
 int b2World::CalculateReasonableParticleIterations(float32 timeStep) const
 {
-	if (m_particleSystemList == NULL)
+	if (m_particleSystemList == nullptr)
 		return 1;
 
 	// Use the smallest radius, since that represents the worst-case.
 	return b2CalculateParticleIterations(m_gravity.Length(),
-		GetSmallestRadius(this),
-		timeStep);
+										 GetSmallestRadius(this),
+										 timeStep);
 }
 
 int32 b2World::GetProxyCount() const

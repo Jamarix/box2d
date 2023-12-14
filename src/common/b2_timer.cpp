@@ -1,6 +1,7 @@
 // MIT License
 
 // Copyright (c) 2019 Erin Catto
+// Copyright (c) 2014 Google, Inc.
 
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -31,6 +32,18 @@ double b2Timer::s_invFrequency = 0.0;
 #endif
 
 #include <windows.h>
+
+// From LiquidFun library
+typedef BOOL(WINAPI* SystemGetTimeFunc)(_Out_ LARGE_INTEGER* lpFrequency);
+SystemGetTimeFunc systemGetTimeFunc = ::QueryPerformanceCounter;
+SystemGetTimeFunc systemGetFreqFunc = ::QueryPerformanceFrequency;
+
+double b2Timer::GetTicks()
+{
+	LARGE_INTEGER largeInteger;
+	systemGetTimeFunc(&largeInteger);
+	return largeInteger.QuadPart;
+}
 
 b2Timer::b2Timer()
 {
@@ -73,6 +86,21 @@ float b2Timer::GetMilliseconds() const
 b2Timer::b2Timer()
 {
     Reset();
+}
+
+double b2Timer::GetTicks()
+{
+	static const int NSEC_PER_SEC = 1000000000;
+
+#ifdef __linux__
+	timespec ts;
+	systemGetTimeFunc(CLOCK_MONOTONIC, &ts);
+	return ((int64)ts.tv_sec) * NSEC_PER_SEC + ts.tv_nsec;
+#else
+	timeval t;
+	systemGetTimeFunc(&t, 0);
+	return ((int64)t.tv_sec) * NSEC_PER_SEC + t.tv_usec * 1000;
+#endif
 }
 
 void b2Timer::Reset()

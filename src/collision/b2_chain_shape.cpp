@@ -1,6 +1,7 @@
 // MIT License
 
 // Copyright (c) 2019 Erin Catto
+// Copyright (c) 2013 Google, Inc.
 
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -83,9 +84,23 @@ void b2ChainShape::CreateChain(const b2Vec2* vertices, int32 count,	const b2Vec2
 	m_nextVertex = nextVertex;
 }
 
-// Empty
-void b2ChainShape::ComputeDistance(const b2Transform& xf, const b2Vec2& p, float32* distance, b2Vec2* normal, int32 childIndex) const {
+//void b2ChainShape::SetPrevVertex(const b2Vec2& prevVertex)
+//{
+//	m_prevVertex = prevVertex;
+//	m_hasPrevVertex = true;
+//}
+//
+//void b2ChainShape::SetNextVertex(const b2Vec2& nextVertex)
+//{
+//	m_nextVertex = nextVertex;
+//	m_hasNextVertex = true;
+//}
 
+// From LiquidFun library
+void b2ChainShape::ComputeDistance(const b2Transform& xf, const b2Vec2& p, float32* distance, b2Vec2* normal, int32 childIndex) const {
+	b2EdgeShape edge;
+	GetChildEdge(&edge, childIndex);
+	edge.ComputeDistance(xf, p, distance, normal, 0);
 };
 
 b2Shape* b2ChainShape::Clone(b2BlockAllocator* allocator) const

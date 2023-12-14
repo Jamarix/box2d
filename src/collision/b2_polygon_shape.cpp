@@ -1,6 +1,7 @@
 // MIT License
 
 // Copyright (c) 2019 Erin Catto
+// Copyright (c) 2013 Google, Inc.
 
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -32,9 +33,6 @@ b2PolygonShape::b2PolygonShape()
 	m_count = 0;
 	m_centroid.SetZero();
 }
-
-// Empty
-void b2PolygonShape::ComputeDistance(const b2Transform& xf, const b2Vec2& p, float32* distance, b2Vec2* normal, int32 childIndex) const {};
 
 b2Shape* b2PolygonShape::Clone(b2BlockAllocator* allocator) const
 {
@@ -181,6 +179,51 @@ bool b2PolygonShape::TestPoint(const b2Transform& xf, const b2Vec2& p) const
 	}
 
 	return true;
+}
+
+// From LiquidFun library
+void b2PolygonShape::ComputeDistance(const b2Transform& xf, const b2Vec2& p, float32* distance, b2Vec2* normal, int32 childIndex) const
+{
+	B2_NOT_USED(childIndex);
+
+	b2Vec2 pLocal = b2MulT(xf.q, p - xf.p);
+	float32 maxDistance = -FLT_MAX;
+	b2Vec2 normalForMaxDistance = pLocal;
+
+	for (int32 i = 0; i < m_count; ++i)
+	{
+		float32 dot = b2Dot(m_normals[i], pLocal - m_vertices[i]);
+		if (dot > maxDistance)
+		{
+			maxDistance = dot;
+			normalForMaxDistance = m_normals[i];
+		}
+	}
+
+	if (maxDistance > 0)
+	{
+		b2Vec2 minDistance = normalForMaxDistance;
+		float32 minDistance2 = maxDistance * maxDistance;
+		for (int32 i = 0; i < m_count; ++i)
+		{
+			b2Vec2 distance = pLocal - m_vertices[i];
+			float32 distance2 = distance.LengthSquared();
+			if (minDistance2 > distance2)
+			{
+				minDistance = distance;
+				minDistance2 = distance2;
+			}
+		}
+
+		*distance = b2Sqrt(minDistance2);
+		*normal = b2Mul(xf.q, minDistance);
+		normal->Normalize();
+	}
+	else
+	{
+		*distance = maxDistance;
+		*normal = b2Mul(xf.q, normalForMaxDistance);
+	}
 }
 
 bool b2PolygonShape::RayCast(b2RayCastOutput* output, const b2RayCastInput& input,

@@ -1,6 +1,7 @@
 // MIT License
 
 // Copyright (c) 2019 Erin Catto
+// Copyright (c) 2013 Google, Inc.
 
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -60,6 +61,7 @@ bool b2EdgeShape::TestPoint(const b2Transform& xf, const b2Vec2& p) const
 	return false;
 }
 
+// From LiquidFun library
 void b2EdgeShape::ComputeDistance(const b2Transform& xf, const b2Vec2& p, float32* distance, b2Vec2* normal, int32 childIndex) const
 {
 	B2_NOT_USED(childIndex);
@@ -86,7 +88,6 @@ void b2EdgeShape::ComputeDistance(const b2Transform& xf, const b2Vec2& p, float3
 	float32 d1 = d.Length();
 	*distance = d1;
 	*normal = d1 > 0 ? 1 / d1 * d : b2Vec2_zero;
-
 }
 
 // p = p1 + t * d

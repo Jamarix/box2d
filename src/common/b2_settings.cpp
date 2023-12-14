@@ -1,6 +1,7 @@
 // MIT License
 
 // Copyright (c) 2019 Erin Catto
+// Copyright (c) 2013 Google, Inc.
 
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -29,6 +30,14 @@
 
 b2Version b2_version = {2, 4, 1};
 
+// From LiquidFun library
+#define LIQUIDFUN_VERSION_MAJOR 1
+#define LIQUIDFUN_VERSION_MINOR 1
+#define LIQUIDFUN_VERSION_REVISION 0
+#define LIQUIDFUN_STRING_EXPAND(X) #X
+#define LIQUIDFUN_STRING(X) LIQUIDFUN_STRING_EXPAND(X)
+
+
 // Memory allocators. Modify these to use your own allocator.
 void* b2Alloc_Default(int32 size)
 {
@@ -39,6 +48,24 @@ void b2Free_Default(void* mem)
 {
 	free(mem);
 }
+
+const b2Version b2_liquidFunVersion = {
+	LIQUIDFUN_VERSION_MAJOR, LIQUIDFUN_VERSION_MINOR,
+	LIQUIDFUN_VERSION_REVISION,
+};
+
+const char* b2_liquidFunVersionString =
+"LiquidFun "
+LIQUIDFUN_STRING(LIQUIDFUN_VERSION_MAJOR) "."
+LIQUIDFUN_STRING(LIQUIDFUN_VERSION_MINOR) "."
+LIQUIDFUN_STRING(LIQUIDFUN_VERSION_REVISION);
+
+static int32 b2_numAllocs = 0;
+
+// Initialize default allocator.
+//static b2AllocFunction b2_allocCallback = b2Alloc_Default;
+//static b2FreeFunction b2_freeCallback = b2Free_Default;
+static void* b2_callbackData = nullptr;
 
 // You can modify this to use your logging facility.
 void b2Log_Default(const char* string, va_list args)
