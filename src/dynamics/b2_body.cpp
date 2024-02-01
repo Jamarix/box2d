@@ -214,7 +214,7 @@ b2Fixture* b2Body::CreateFixture(const b2Shape* shape, float density)
 
 void b2Body::DestroyFixture(b2Fixture* fixture)
 {
-	if (fixture == NULL)
+	if (fixture == nullptr)
 	{
 		return;
 	}

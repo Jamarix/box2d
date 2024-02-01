@@ -216,6 +216,10 @@ public:
 	/// @param wake also wake up the body
 	void ApplyForceToCenter(const b2Vec2& force, bool wake);
 
+	/// ADDED SPECIFICALLY FOR CRISTAL-ENGINE
+	/// Returns force applied on a body
+	const b2Vec2 GetAppliedForce() const;
+
 	/// Apply a torque. This affects the angular velocity
 	/// without affecting the linear velocity of the center of mass.
 	/// @param torque about the z-axis (out of the screen), usually in N-m.
@@ -234,6 +238,10 @@ public:
 	/// @param impulse the world impulse vector, usually in N-seconds or kg-m/s.
 	/// @param wake also wake up the body
 	void ApplyLinearImpulseToCenter(const b2Vec2& impulse, bool wake);
+
+	/// MADE SPECIFICALLY FOR CRISTAL-ENGINE
+	/// Returns linear impulse applied to a body
+	const b2Vec2& GetLinearImpulse() const;
 
 	/// Apply an angular impulse.
 	/// @param impulse the angular impulse in units of kg*m*m/s
@@ -464,6 +472,7 @@ private:
 	b2Sweep m_sweep;		// the swept motion for CCD
 
 	b2Vec2 m_linearVelocity;
+	b2Vec2 m_linearImpulse;
 	float m_angularVelocity;
 
 	b2Vec2 m_force;
@@ -676,6 +685,7 @@ inline void b2Body::SetAwake(bool flag)
 		m_flags &= ~e_awakeFlag;
 		m_sleepTime = 0.0f;
 		m_linearVelocity.SetZero();
+		m_linearImpulse.SetZero();
 		m_angularVelocity = 0.0f;
 		m_force.SetZero();
 		m_torque = 0.0f;
@@ -847,6 +857,7 @@ inline void b2Body::ApplyLinearImpulseToCenter(const b2Vec2& impulse, bool wake)
 {
 	if (m_type != b2_dynamicBody)
 	{
+		m_linearImpulse = { 0.0f, 0.0f };
 		return;
 	}
 
@@ -858,9 +869,16 @@ inline void b2Body::ApplyLinearImpulseToCenter(const b2Vec2& impulse, bool wake)
 	// Don't accumulate velocity if the body is sleeping
 	if (m_flags & e_awakeFlag)
 	{
-		m_linearVelocity += m_invMass * impulse;
+		m_linearImpulse = m_invMass * impulse;
+		m_linearVelocity += m_linearImpulse;
 	}
 }
+
+inline const b2Vec2& b2Body::GetLinearImpulse() const
+{
+	return m_linearImpulse;
+}
+
 
 inline void b2Body::ApplyAngularImpulse(float impulse, bool wake)
 {
@@ -905,6 +923,11 @@ inline b2World* b2Body::GetWorld()
 inline const b2World* b2Body::GetWorld() const
 {
 	return m_world;
+}
+
+inline const b2Vec2 b2Body::GetAppliedForce() const
+{
+	return m_force;
 }
 
 #if LIQUIDFUN_EXTERNAL_LANGUAGE_API

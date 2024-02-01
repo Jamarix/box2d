@@ -48,6 +48,7 @@ b2World::b2World(const b2Vec2& gravity)
 
 	m_bodyList = nullptr;
 	m_jointList = nullptr;
+	m_particleSystemList = nullptr;
 
 	m_bodyCount = 0;
 	m_jointCount = 0;
@@ -57,6 +58,9 @@ b2World::b2World(const b2Vec2& gravity)
 	m_subStepping = false;
 
 	m_stepComplete = true;
+
+	// From LiquidFun library
+	m_flags = e_clearForces;
 
 	m_allowSleep = true;
 	m_gravity = gravity;
@@ -85,7 +89,7 @@ b2World::~b2World()
 		{
 			b2Fixture* fNext = f->m_next;
 			f->m_proxyCount = 0;
-			f->Destroy(&m_blockAllocator);
+			f->Destroy(&m_blockAllocator); 
 			f = fNext;
 		}
 

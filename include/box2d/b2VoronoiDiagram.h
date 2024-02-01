@@ -69,8 +69,8 @@ private:
 
 	struct b2VoronoiDiagramTask
 	{
-		int32 m_x, m_y, m_i;
-		Generator* m_generator;
+		int32 m_x = 0, m_y = 0, m_i = 0;
+		Generator* m_generator = nullptr;
 
 		b2VoronoiDiagramTask() {}
 		b2VoronoiDiagramTask(int32 x, int32 y, int32 i, Generator* g)

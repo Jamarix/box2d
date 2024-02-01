@@ -249,7 +249,7 @@ struct b2ParticleSystemDef
 	float32 ejectionStrength;
 
 	/// Produces static pressure
-	/// Larger values increase the pressure on neighboring partilces
+	/// Larger values increase the pressure on neighboring particles
 	/// For a description of static pressure, see
 	/// http://en.wikipedia.org/wiki/Static_pressure#Static_pressure_in_fluid_dynamics
 	float32 staticPressureStrength;
@@ -413,25 +413,25 @@ public:
 	/// Particle density affects the mass of the particles, which in turn
 	/// affects how the particles interact with b2Bodies. Note that the density
 	/// does not affect how the particles interact with each other.
-	void SetDensity(float32 density);
+	void SetDensity(float density);
 
 	/// Get the particle density.
-	float32 GetDensity() const;
+	float GetDensity() const;
 
 	/// Change the particle gravity scale. Adjusts the effect of the global
 	/// gravity vector on particles.
-	void SetGravityScale(float32 gravityScale);
+	void SetGravityScale(float gravityScale);
 
 	/// Get the particle gravity scale.
-	float32 GetGravityScale() const;
+	float GetGravityScale() const;
 
 	/// Damping is used to reduce the velocity of particles. The damping
 	/// parameter can be larger than 1.0f but the damping effect becomes
 	/// sensitive to the time step when the damping parameter is large.
-	void SetDamping(float32 damping);
+	void SetDamping(float damping);
 
 	/// Get damping for particles
-	float32 GetDamping() const;
+	float GetDamping() const;
 
 	/// Change the number of iterations when calculating the static pressure of
 	/// particles. By default, 8 iterations. You can reduce the number of
@@ -482,8 +482,8 @@ public:
 	/// Get the weight of each particle
 	/// Array is length GetParticleCount()
 	/// @return the pointer to the head of the particle positions array.
-	float32* GetWeightBuffer();
-	const float32* GetWeightBuffer() const;
+	float* GetWeightBuffer();
+	const float* GetWeightBuffer() const;
 
 	/// Get the user-specified data of each particle.
 	/// Array is length GetParticleCount()
@@ -578,7 +578,7 @@ public:
 	int32 GetStuckCandidateCount() const;
 
 	/// Compute the kinetic energy that can be lost by damping force
-	float32 ComputeCollisionEnergy() const;
+	float ComputeCollisionEnergy() const;
 
 	/// Set strict Particle/Body contact check.
 	/// This is an option that will help ensure correct behavior if there are
@@ -594,12 +594,12 @@ public:
 	/// Set the lifetime (in seconds) of a particle relative to the current
 	/// time.  A lifetime of less than or equal to 0.0f results in the particle
 	/// living forever until it's manually destroyed by the application.
-	void SetParticleLifetime(const int32 index, const float32 lifetime);
+	void SetParticleLifetime(const int32 index, const float lifetime);
 	/// Get the lifetime (in seconds) of a particle relative to the current
 	/// time.  A value > 0.0f is returned if the particle is scheduled to be
 	/// destroyed in the future, values <= 0.0f indicate the particle has an
 	/// infinite lifetime.
-	float32 GetParticleLifetime(const int32 index);
+	float GetParticleLifetime(const int32 index);
 
 	/// Enable / disable destruction of particles in CreateParticle() when
 	/// no more particles can be created due to a prior call to
@@ -620,7 +620,7 @@ public:
 	/// Convert a expiration time value in returned by
 	/// GetExpirationTimeBuffer() to a time in seconds relative to the
 	/// current simulation time.
-	float32 ExpirationTimeToLifetime(const int32 expirationTime) const;
+	float ExpirationTimeToLifetime(const int32 expirationTime) const;
 	/// Get the array of particle indices ordered by reverse lifetime.
 	/// The oldest particle indexes are at the end of the array with the
 	/// newest at the start.  Particles with infinite lifetimes
