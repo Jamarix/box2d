@@ -27,6 +27,7 @@
 #include "b2_api.h"
 #include "b2_math.h"
 #include "b2_shape.h"
+#include "glm/glm.hpp"
 #include <memory>
 
 class b2Fixture;
@@ -400,6 +401,9 @@ public:
 
 	/// Dump this body to a file
 	void Dump();
+
+	// Added for Cristal Engine
+	inline static bool s_IsRotateRange360 = true;
 
 #if LIQUIDFUN_EXTERNAL_LANGUAGE_API
 public:
@@ -901,6 +905,15 @@ inline void b2Body::ApplyAngularImpulse(float impulse, bool wake)
 
 inline void b2Body::SynchronizeTransform()
 {
+	// Added for Cristal Engine
+	if (s_IsRotateRange360)
+	{
+		float degrees = glm::degrees(m_sweep.a);
+		if (degrees < -360.0f) degrees += 360.0f;
+		else if (degrees > 360.0f) degrees -= 360.0f;
+		m_sweep.a = glm::radians(degrees);
+	}
+
 	m_xf.q.Set(m_sweep.a);
 	m_xf.p = m_sweep.c - b2Mul(m_xf.q, m_sweep.localCenter);
 }
@@ -911,6 +924,16 @@ inline void b2Body::Advance(float alpha)
 	m_sweep.Advance(alpha);
 	m_sweep.c = m_sweep.c0;
 	m_sweep.a = m_sweep.a0;
+	
+	// Added for Cristal Engine
+	if (s_IsRotateRange360)
+	{
+		float degrees = glm::degrees(m_sweep.a);
+		if (degrees < -360.0f) degrees += 360.0f;
+		else if (degrees > 360.0f) degrees -= 360.0f;
+		m_sweep.a = glm::radians(degrees);
+	}
+
 	m_xf.q.Set(m_sweep.a);
 	m_xf.p = m_sweep.c - b2Mul(m_xf.q, m_sweep.localCenter);
 }
