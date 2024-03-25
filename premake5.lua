@@ -12,9 +12,9 @@ project "box2d"
 		"src/**.cpp",
 		"include/**.h",
 		"../glm/glm/**.hpp",
-        "../glm/glm/**.inl",
-        "../glm/glm/glx/**.hpp",
-        "../glm/glm/glx/**.inl", 
+    "../glm/glm/**.inl",
+    "../glm/glm/glx/**.hpp",
+    "../glm/glm/glx/**.inl", 
 	}
 
 	includedirs {

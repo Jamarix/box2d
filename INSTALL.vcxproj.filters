@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Michael\Development\CristalEngine\CMakeFiles\97b7a2d0283ba87759f80e077f7db00c\INSTALL_force.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{3284ABE1-E1C3-36D3-ABB0-B662E665C3D0}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
