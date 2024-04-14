@@ -65,7 +65,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include;C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\src;C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\..\glm\glm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include;C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\src;C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\..\..\glm\glm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -79,16 +79,16 @@
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <UseFullPaths>false</UseFullPaths>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
       <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include;C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\src;C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\..\glm\glm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include;C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\src;C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\..\..\glm\glm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include;C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\src;C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\..\glm\glm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include;C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\src;C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\..\..\glm\glm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -101,7 +101,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include;C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\src;C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\..\glm\glm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include;C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\src;C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\..\..\glm\glm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <ExceptionHandling>Sync</ExceptionHandling>
       <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
@@ -109,22 +109,22 @@
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <Optimization>MaxSpeed</Optimization>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
-      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <UseFullPaths>false</UseFullPaths>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
       <DebugInformationFormat>
       </DebugInformationFormat>
       <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include;C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\src;C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\..\glm\glm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include;C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\src;C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\..\..\glm\glm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include;C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\src;C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\..\glm\glm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include;C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\src;C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\..\..\glm\glm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -137,28 +137,27 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Distribution|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include;C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\src;C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\..\glm\glm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include;C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\src;C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\..\..\glm\glm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <ExceptionHandling>Sync</ExceptionHandling>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
-      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <UseFullPaths>false</UseFullPaths>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR="Distribution"</PreprocessorDefinitions>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;CMAKE_INTDIR="Distribution"</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
       <DebugInformationFormat>
       </DebugInformationFormat>
       <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\"Distribution\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include;C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\src;C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\..\glm\glm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;CMAKE_INTDIR=\"Distribution\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include;C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\src;C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\..\..\glm\glm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include;C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\src;C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\..\glm\glm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\include;C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\src;C:\Users\Michael\Development\CristalEngine\CristalEngine\vendor\box2d\..\..\glm\glm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
